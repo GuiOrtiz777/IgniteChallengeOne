@@ -1,0 +1,61 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    border-radius: 8px;
+    padding: 19px;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.task:last-child {
+    margin-bottom: 0;
+}
+
+.task .roundCheckbox {
+    min-width: 17.45px;
+    height: 17.45px;
+    border: 1px solid var(--blue);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.task input[type=checkbox] {
+    visibility: hidden;
+    position: absolute;
+}
+
+.task .roundCheckbox img {
+    visibility: hidden;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    border-radius: 50%;
+    color: var(--white);
+    width: 20px;
+    height: 20px;
+    transition: .1s linear visibility;
+} 
+
+
+.task .roundCheckbox input:checked ~ img {
+    visibility: visible;
+}
+
+.task button {
+    outline: none;
+    background: transparent;
+    border: none;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: color .2s linear;
+}
+
+.task .isDoneTextTask {
+    text-decoration: line-through;
+}
